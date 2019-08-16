@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import axios from "axios";
 import Comp from "./components/component";
+import Buttons from "./components/buttons";
 
 
 const App = () => {
@@ -40,6 +41,8 @@ const App = () => {
                     key = {index}/>;
                     
       })}
+
+    <Buttons />
     </div>
   );
 }
