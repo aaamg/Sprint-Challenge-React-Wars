@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+const People = styled.div`
+font-size: 2rem;
+`
+
 const Button = styled.button`
 color: palevioletred;
 background-color: #FBBFE3;
@@ -28,13 +32,14 @@ function Comp(props) {
   return (
     <div className="contain">
       <div className="character">{props.name}</div>
-      <div className="gender">{props.gender}</div>
-
-      <Button> <A href="https://swapi.co/about" target="_blank">ABout Star Wars API</A></Button>
-        <TomatoButton> <A href="https://swapi.co/" target="_blank">Link to SWAPI API</A></TomatoButton>
-    </div>
+      
+      <People className="gender">{props.gender}</People>
+     
+      <Button> <A href="https://swapi.co/about" target="_blank">About Star Wars API</A></Button>
+        <TomatoButton> <A href="https://swapi.co/" target="_blank">Link to Start SWAPI!</A></TomatoButton>
+        </div>
   );
 }
-
+//<div className="character">{props.name}</div>
 //exporting data-
 export default Comp;

@@ -12,28 +12,43 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
-  const [char, setChar] = useState();
+  const [char, setChar] = useState([]);
   useEffect(() => {
   axios.get("https://swapi.co/api/people/")
-  .then(res => {
-    const starChar = res.data.results;
-    setChar(starChar);
-    console.log(res.data.results);
-    //char.map(setChar.names)
+  .then(response => {
+    //console.log(response)
+    setChar(response.data.results);
+    console.log(char)
+    //setChar(starChar);
+    
+    
   });
 }, []);
 
-//{setChar.map((data) =>  data={name} )}
-
-
   return (
     
-
+    
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <Comp />  
+      {char.map((person, index) => {
+       return <Comp 
+                    name = {person.name} 
+                    key = {index}/>;
+      })}
     </div>
   );
 }
 
 export default App;
+
+/*
+{char.map(person => {
+  return <Comp name = {person.name} gender = {person.gender}/>;
+})}
+
+ {char.map((person, index) => {
+       return <Comp name = {person.name} key ={index}/>;
+      })}
+       
+
+*/
