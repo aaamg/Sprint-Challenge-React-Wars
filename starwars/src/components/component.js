@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const People = styled.div`
+const Name = styled.div`
 font-size: 2rem;
+color: purple;
+`
+
+const Stats = styled.div`
+font-size: 1rem;
 `
 
 const Button = styled.button`
@@ -31,9 +36,9 @@ function Comp(props) {
   //normal JSX part
   return (
     <div className="contain">
-      <div className="character">{props.name}</div>
+      <Name className="character">{props.name} || {props.gender} </Name>
       
-      <People className="gender">{props.gender}</People>
+      <Stats className="gender">Birth year: {props.birth_year} || Height: {props.height} || Weight: {props.mass}</Stats>
      
       <Button> <A href="https://swapi.co/about" target="_blank">About Star Wars API</A></Button>
         <TomatoButton> <A href="https://swapi.co/" target="_blank">Link to Start SWAPI!</A></TomatoButton>

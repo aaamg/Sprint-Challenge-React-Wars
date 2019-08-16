@@ -33,7 +33,12 @@ const App = () => {
       {char.map((person, index) => {
        return <Comp 
                     name = {person.name} 
+                    height = {person.height}
+                    gender = {person.gender}
+                    birth_year = {person.birth_year}
+                    mass = {person.mass}
                     key = {index}/>;
+                    
       })}
     </div>
   );
