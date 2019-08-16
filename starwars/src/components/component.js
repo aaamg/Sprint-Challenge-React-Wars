@@ -3,12 +3,14 @@ import styled from "styled-components";
 
 const Name = styled.div`
 font-size: 2rem;
-color: cyan;
+color: #003beb;
+text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 margin-bottom: 5px;
 `
 
 const Stats = styled.div`
 font-size: 1rem;
+color: white;
 margin-bottom: 30px;
 `
 

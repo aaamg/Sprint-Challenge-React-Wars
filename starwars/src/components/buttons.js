@@ -4,18 +4,18 @@ import styled from "styled-components";
 
 
 const Button = styled.button`
-color: palevioletred;
-background-color: #FBBFE3;
+color: blue;
+background-color: #33b5e5;
 font-size: 1em;
 margin: 1em;
 padding: 0.25em 1em;
-border: 2px solid palevioletred;
+border: 2px solid #33b5e5;
 border-radius: 3px;
-font-color: cyan;
 `;
 
 const TomatoButton = styled(Button)`
 color: tomato;
+background-color: tomato;
 border-color: tomato;
 `;
 
